@@ -10,7 +10,6 @@ import java.util.Observer;
 public class Serveur implements Observer {
 
     final FacadeGame monModele;
-    int indiceDeModificationDuModele = 0;
 
     private Serveur() throws RemoteException {
         super();

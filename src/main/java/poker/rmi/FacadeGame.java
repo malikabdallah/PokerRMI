@@ -35,7 +35,7 @@ public interface FacadeGame extends Remote {
 
     String serviceName = "BelotteService";
 
-    List<JoueurInterface> getLesInscrits() throws RemoteException;
+    List<String> getLesInscrits() throws RemoteException;
 
     JoueurInterface getJoueurByName(String name) throws RemoteException, AucunJoueurNePossedeCeNomException;
 

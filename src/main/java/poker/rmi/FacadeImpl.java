@@ -5,15 +5,28 @@ import poker.rmi.exceptions.*;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Observable;
 
 public class FacadeImpl extends Observable implements FacadeGame {
 
+
+     public List<String>joueursConnecte=new ArrayList<>();
+    int indiceDeModificationDuModele = 0;
+
+    public void setIndiceDeModificationDuModele(int indiceDeModificationDuModele) {
+        this.indiceDeModificationDuModele = indiceDeModificationDuModele;
+    }
+
     @Override
     public void ajouterJoueurInscrit(String name) throws RemoteException, NomDeJoueurDejaExistantException, CaracteresSpeciauxException {
+        if(joueursConnecte.contains(name)){
+            throw new NomDeJoueurDejaExistantException();
+        }
 
+        joueursConnecte.add(name);
     }
 
     @Override
@@ -57,8 +70,8 @@ public class FacadeImpl extends Observable implements FacadeGame {
     }
 
     @Override
-    public List<JoueurInterface> getLesInscrits() throws RemoteException {
-        return null;
+    public List<String> getLesInscrits() throws RemoteException {
+        return joueursConnecte;
     }
 
     @Override
@@ -103,6 +116,6 @@ public class FacadeImpl extends Observable implements FacadeGame {
 
     @Override
     public int getIndiceDeModificationDuModele() throws RemoteException {
-        return 0;
+        return indiceDeModificationDuModele;
     }
 }

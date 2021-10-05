@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.vue.controller.Acceuil">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="259.0" style="-fx-background-color: #0B9F53;">
+         <children>
+            <Text fill="GOLD" layoutX="60.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POKER JAVA RMI" wrappingWidth="137.13671875" />
+            <Button layoutX="60.0" layoutY="95.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="CREER UNE PARTIE" textFill="GOLD" />
+            <Button layoutX="60.0" layoutY="175.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="REJOINDRE UNE PARTIE" textFill="GOLD" />
+            <Button layoutX="59.0" layoutY="254.0" mnemonicParsing="false" style="-fx-background-color: BLACK;" text="VISUALISER UNE PARTIE" textFill="GOLD" />
+         </children>
+      </Pane>
+      <ListView fx:id="list" layoutX="316.0" layoutY="168.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0B9F53;" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="316.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

@@ -22,8 +22,13 @@ public class Fabrique {
     }
 
 
-    public void createConnexionView() {
-        load(Home.class.getResource("/vues/home.fxml"), "Login");
+    public Vue createConnexionView() {
+        return load(Home.class.getResource("/vues/home.fxml"), "Login");
+    }
+    public Vue createAcceulView() {
+
+        System.out.println("load acceuil vue");
+        return load(Home.class.getResource("/vues/acceuil.fxml"), "Login");
     }
 
 

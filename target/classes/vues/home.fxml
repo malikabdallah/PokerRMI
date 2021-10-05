@@ -20,12 +20,12 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField layoutX="85.0" layoutY="96.0" />
+      <TextField fx:id="login" layoutX="85.0" layoutY="96.0" />
       <Text fill="#ffe6e6" layoutX="26.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pseudo" wrappingWidth="51.09765625">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Button layoutX="85.0" layoutY="169.0" mnemonicParsing="false" style="-fx-background-color: gold;" text="login" />
+      <Button onMouseClicked="#connexion" layoutX="85.0" layoutY="169.0" mnemonicParsing="false" style="-fx-background-color: gold;" text="login" />
    </children>
 </Pane>
