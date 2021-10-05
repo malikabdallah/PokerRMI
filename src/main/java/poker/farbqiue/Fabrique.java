@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import poker.vue.controller.Home;
 
 import java.io.IOException;
 import java.net.URL;
@@ -20,13 +21,13 @@ public class Fabrique {
         this.controlleur = controller;
     }
 
-/*
-    public void createConnexionView(){
-        load(ConnexionView.class.getResource("/vue/connexion.fxml"), "Login");
+
+    public void createConnexionView() {
+        load(Home.class.getResource("/vues/home.fxml"), "Login");
     }
 
 
- */
+
     private Vue load(URL url, String title){
         FXMLLoader loader = new FXMLLoader(url);
         Parent root = null;

@@ -11,5 +11,6 @@ public class Controlleur {
     public Controlleur(Stage primaryStage) {
         this.stage=primaryStage;
         this.fabrique=new Fabrique(primaryStage,this);
+        this.fabrique.createConnexionView();
     }
 }
