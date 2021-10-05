@@ -1,4 +1,4 @@
-package clientjfx.rmi;
+package poker.rmi;
 
 public class Serveur {
 }
