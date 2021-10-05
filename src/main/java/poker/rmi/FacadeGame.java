@@ -1,10 +1,14 @@
-package poker.modele.facade;
+package poker.rmi;
 
+import poker.modele.*;
 import poker.rmi.exceptions.*;
 
+import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.List;
+import java.util.Map;
 
-public interface facadeGame {
+public interface FacadeGame extends Remote {
 
     void ajouterJoueurInscrit(String name) throws RemoteException, NomDeJoueurDejaExistantException, CaracteresSpeciauxException;
 
@@ -23,4 +27,32 @@ public interface facadeGame {
     void refuserAtout(String nameConcours, String tours, int id) throws RemoteException;
 
     void quitterEquipe(String nomDuJoueur) throws RemoteException;
+
+
+
+
+
+
+    String serviceName = "BelotteService";
+
+    List<JoueurInterface> getLesInscrits() throws RemoteException;
+
+    JoueurInterface getJoueurByName(String name) throws RemoteException, AucunJoueurNePossedeCeNomException;
+
+    List<Equipe> getLesEquipesIncompletes(Partie partie) throws RemoteException;
+
+    List<Partie> getLesConcours() throws RemoteException;
+
+    Partie getConcoursByName(String name) throws RemoteException;
+
+
+    boolean atoutPris(String nameConcours, String tours, int id) throws RemoteException;
+
+    Manche getManche(String nameConcours, String tours, int id) throws RemoteException;
+
+    Map<JoueurInterface, LaCarte> getCartePosee(String nameConcours, String tours, int id) throws RemoteException;
+
+    JoueurInterface getJoueurEnCoursDeTours(String nom, String tours, int id) throws RemoteException;
+
+    int getIndiceDeModificationDuModele() throws RemoteException;
 }

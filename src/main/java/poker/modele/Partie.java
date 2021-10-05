@@ -1,4 +1,4 @@
 package poker.modele;
 
-public class Concours {
+public class Partie {
 }
